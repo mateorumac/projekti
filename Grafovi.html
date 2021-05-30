@@ -1,0 +1,278 @@
+<!doctype html>
+ <html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Vizualizacija</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+
+
+
+        <link rel="stylesheet" href="css/moj.css">
+        <link rel="stylesheet" href="css/dizajn.css">
+        <link rel="shortcut icon" href="img/favicon.ico" />
+        <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+
+          var data = google.visualization.arrayToDataTable([
+            ['Država', 'Broj osvojenih titula'],
+            ['Španjolska',     18],
+            ['Engleska',      13],
+            ['Italija',  12],
+            ['Njemačka', 8],
+            ['Nizozemska',    6],
+            ['Portugal',    4],
+            ['Ostali',    4]
+          ]);
+
+          var options = {
+            title: ''
+          };
+
+          var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+          chart.draw(data, options);}
+
+          google.charts.load('current', {'packages':['table']});
+      google.charts.setOnLoadCallback(drawTable);
+
+      function drawTable() {
+              var data2 = new google.visualization.DataTable();
+              data2.addColumn('string', 'Ime');
+              data2.addColumn('number', 'Broj golova');
+              data2.addColumn('number', 'Omjer golova po utakmici');
+              data2.addColumn('boolean', 'Aktivan igrač');
+              data2.addRows([
+                ['Cristiano Ronaldo',  {v: 120, f: '120'}, {v: 0.79, f: '0.79'} , true],
+                ['Lionel Messi',   {v:100,   f: '100'}, {v: 0.80, f: '0.80'} , true],
+                ['Raul Gonzalez', {v: 71, f: '71'}, {v: 0.50, f: '0.50'} , false],
+                ['Ruud van Nistelrooy',   {v: 56,  f: '56'}, {v: 0.77, f: '0.77'} , false],
+                ['Karim Benzema', {v: 55, f: '55'}, {v: 0.53, f: '0.53'} , true],
+                ['Thierry Henry', {v: 50, f: '50'}, {v: 0.45, f: '0.45'} , false],
+                ['Alfredo Di Stefano', {v: 49, f: '49'}, {v: 0.84, f: '0.84'} , false],
+                ['Andriy Schevchenko', {v: 48, f: '48'}, {v: 0.48, f: '0.48'} , false],
+                ['Zlatan Ibrahimović', {v: 48, f: '48'}, {v: 0.40, f: '0.40'} , true],
+                ['Eusebio', {v: 47, f: '47'}, {v: 0.75, f: '0.75'} , false],
+              ]);
+
+              var table = new google.visualization.Table(document.getElementById('table'));
+
+              table.draw(data2, {showRowNumber: true, width: '100%', height: '100%'});
+
+
+
+                    var data3 = new google.visualization.DataTable();
+                    data3.addColumn('string', 'Ime');
+                    data3.addColumn('number', 'Broj utakmica');
+                    data3.addColumn('string', 'Godine igranja');
+                    data3.addColumn('string', 'Klub');
+                    data3.addRows([
+                      ['Iker Casillas',  {v: 177, f: '177'}, '1999.-2019.', 'Real Madrid, Porto'],
+                      ['Cristiano Ronaldo',   {v:175,   f: '175'}, '2002.-danas', 'Manchester United, Real Madrid, Juventus'],
+                      ['Xavi', {v: 151, f: '151'}, '1998.-2015.', 'Barcelona'],
+                      ['Lionel Messi',   {v: 149,  f: '149'}, '2004.-danas', 'Barcelona'],
+                      ['Raul', {v: 142, f: '142'}, '1995.-2011.', 'Real Madrid, Schalke 04'],
+                      ['Ryan Giggs', {v: 141, f: '141'}, '1993.-2014.', 'Manchester United'],
+                      ['Andres Iniesta', {v: 130, f: '130'}, '2002.-2018.', 'Barcelona'],
+                      ['Karim Benzema', {v: 130, f: '130'}, '2005.-danas', 'OL, Real Madrid'],
+                      ['Sergio Ramos', {v: 129, f: '129'}, '2005.-danas', 'Real Madrid'],
+                      ['Clarence Seedorf', {v: 125, f: '125'}, '1994.-2012.', 'Ajax, Real Madrid, Inter, Milan'],
+                    ]);
+
+                    var table = new google.visualization.Table(document.getElementById('table2_div'));
+
+                    table.draw(data3, {showRowNumber: true, width: '100%', height: '100%'});
+                  }
+
+      </script>
+    </head>
+    <body>
+      <section class="first-section">
+        <ul>
+          <li><a href="index.html">Početna</a></li>
+          <li><a href="Projekt.html">Povijest</a></li>
+          <li><a href="Grafovi.html">Vizualizacija</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="text-content">
+                <h2>Vizualizacija podataka</h2>
+                <div class="line-dec"></div>
+                <span>Ovdje ćemo prikazati osnovnu statistiku Lige prvaka</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="second-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+                <h2>KLUBOVI S NAJVIŠE OSVOJENIH NASLOVA<br><br></h2>
+                <div id="graphic"></div>
+
+    <script>
+        var data = [{
+                "name": "R. Madrid",
+                "value": 13,
+        },
+            {
+                "name": "Milan",
+                "value": 7,
+        },
+            {
+                "name": "B. Munich",
+                "value": 6,
+        },
+            {
+                "name": "Liverpool",
+                "value": 6,
+        },
+            {
+                "name": "Barcelona",
+                "value": 5,
+        },
+            {
+                "name": "Ajax",
+                "value": 4,
+        },
+            {
+                "name": "Man Utd",
+                "value": 3,
+        },
+            {
+            "name": "Inter",
+            "value": 3,
+          },
+            {
+        "name": "Juventus",
+        "value": 2,
+        },
+            {
+    "name": "Benfica",
+    "value": 2,
+        }];
+
+        //sortiranje prema veličini
+        data = data.sort(function (a, b) {
+            return d3.ascending(a.value, b.value);
+        })
+
+        //pozicioniranje svg pomoću margina
+        var margin = {
+            top: 10,
+            right: 165,
+            bottom: 10,
+            left: 65
+        };
+
+        var width = 960 - margin.left - margin.right,
+            height = 500 - margin.top - margin.bottom;
+
+        var svg = d3.select("#graphic").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        var x = d3.scale.linear()
+            .range([0, width])
+            .domain([0, d3.max(data, function (d) {
+                return d.value;
+            })]);
+
+        var y = d3.scale.ordinal()
+            .rangeRoundBands([height, 0], .1)
+            .domain(data.map(function (d) {
+                return d.name;
+            }));
+
+        //postavljanje y osi da prikazuje imena
+        var yAxis = d3.svg.axis()
+            .scale(y)
+            //bez kvacica
+            .tickSize(0)
+            .orient("left");
+
+        var gy = svg.append("g")
+            .attr("class", "y axis")
+            .call(yAxis)
+
+        var bars = svg.selectAll(".bar")
+            .data(data)
+            .enter()
+            .append("g")
+
+        //postavljanje stupaca
+        bars.append("rect")
+            .attr("class", "bar")
+            .attr("y", function (d) {
+                return y(d.name);
+            })
+            .attr("height", y.rangeBand())
+            .attr("x", 0)
+            .attr("width", function (d) {
+                return x(d.value);
+            });
+
+        //dodavanje vrijednosti desno od charta
+        bars.append("text")
+            .attr("class", "label")
+            //y pozicija oznake je na pola visine
+            .attr("y", function (d) {
+                return y(d.name) + y.rangeBand() / 2 + 4;
+            })
+            //x pozicija je 5 pixela desno od bara
+            .attr("x", function (d) {
+                return x(d.value) + 5;
+            })
+            .text(function (d) {
+                return d.value;
+            }); </script>
+        </div>
+      </div>
+      </div>
+      </section>
+      <section class="second-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h2>DRŽAVE S NAJVIŠE OSVOJENIH NASLOVA</h2><br><br><br>
+                <div id="piechart" style="width: 900px; height: 500px;"></div>
+              </div></div></div></section>
+        <section class="second-section">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-12">
+                        <h2>TOP STRIJELCI NATJECANJA</h2><br><br><br>
+                        <div id="table"></div>
+                      </div>
+                    </div></div></section>
+                      <section class="second-section">
+                              <div class="container">
+                                <div class="row">
+                                  <div class="col-md-12">
+                                      <h2>IGRAČI S NAJVIŠE ODIGRANIH UTAKMICA</h2><br><br><br>
+                                      <div id="table2_div"></div></div></div></div></section>
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <p>Mateo Rumac | Kolegij: Poslovni informacijski sustavi | 2021. </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+      </body>
+    </html>
